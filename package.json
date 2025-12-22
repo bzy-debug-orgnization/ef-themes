@@ -1,6 +1,6 @@
 {
   "name": "ef-theme",
-  "displayName": "ef-theme",
+  "displayName": "Ef (εὖ) themes for VSCode",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -12,9 +12,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Ef (εὖ) themes for VSCode",
+        "label": "Ef Light",
         "uiTheme": "vs",
-        "path": "./themes/Ef (εὖ) themes for VSCode-color-theme.json"
+        "path": "./themes/ef-light-color-theme.json"
+      },
+      {
+        "label": "Ef Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ef-dark-color-theme.json"
       }
     ]
   }
