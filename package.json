@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/bzy-debug-orgnization/ef-themes"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build:themes": "node scripts/build-themes.mjs",
     "port:palettes": "node scripts/port-palettes.mjs"
