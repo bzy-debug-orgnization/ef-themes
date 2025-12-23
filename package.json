@@ -1,9 +1,10 @@
 {
-  "name": "ef-theme",
+  "name": "ef-themes",
   "publisher": "bzy-debug",
   "displayName": "Ef (εὖ) themes for VSCode",
   "description": "Ef (εὖ) themes for Emacs ported to VSCode.",
   "icon": "icon.png",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/bzy-debug-orgnization/ef-themes"
