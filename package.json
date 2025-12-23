@@ -3,6 +3,11 @@
   "publisher": "bzy-debug",
   "displayName": "Ef (εὖ) themes for VSCode",
   "description": "Ef (εὖ) themes for Emacs ported to VSCode.",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bzy-debug-orgnization/ef-themes"
+  },
   "version": "0.0.1",
   "scripts": {
     "build:themes": "node scripts/build-themes.mjs",

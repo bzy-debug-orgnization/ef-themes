@@ -1,22 +1,49 @@
-# Ef (εὖ) themes for VSCode
+# Ef (εὖ) themes for VS Code
 
-## Build themes
+Curated ports of Protesilaos Stavrou's Ef themes from Emacs to VS Code. Balanced palettes, clear syntax contrast, and focused UI colors for long, calm coding sessions.
 
-VS Code theme JSON files do not support color variables. To keep colors
-maintainable, the source of truth is:
+## Themes
 
-- `ef-theme/themes-src/*-palette.mjs`: named palette entries (auto-discovered).
-- `ef-theme/themes-src/theme-template.mjs`: the shared color arrangement.
-- `ef-theme/themes/*.json`: generated theme files.
+Light:
 
-Run:
+- Ef Arbutus
+- Ef Cyprus
+- Ef Day
+- Ef Deuteranopia Light
+- Ef Duo Light
+- Ef Eagle
+- Ef Elea Light
+- Ef Frost
+- Ef Kassio
+- Ef Light
+- Ef Maris Light
+- Ef Melissa Light
+- Ef Reverie
+- Ef Spring
+- Ef Summer
+- Ef Trio Light
+- Ef Tritanopia Light
 
-```sh
-npm run build:themes
-```
+Dark:
 
-To port all Emacs palettes into `themes-src`:
+- Ef Autumn
+- Ef Bio
+- Ef Cherie
+- Ef Dark
+- Ef Deuteranopia Dark
+- Ef Dream
+- Ef Duo Dark
+- Ef Elea Dark
+- Ef Maris Dark
+- Ef Melissa Dark
+- Ef Night
+- Ef Owl
+- Ef Rosa
+- Ef Symbiosis
+- Ef Trio Dark
+- Ef Tritanopia Dark
+- Ef Winter
 
-```sh
-npm run port:palettes
-```
+## Credits
+
+Ef themes by Protesilaos Stavrou, released under the GNU GPL.
