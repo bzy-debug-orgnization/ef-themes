@@ -1,0 +1,6 @@
+[submodule "ef-themes"]
+	path = ef-themes
+	url = https://github.com/protesilaos/ef-themes.git
+[submodule "modus-themes"]
+	path = modus-themes
+	url = https://github.com/protesilaos/modus-themes.git
