@@ -6,7 +6,7 @@
 - In this repo we mirror the **final palette values** in `src/*-palette.mjs` and generate VS Code themes from those palettes.
 
 ## Sources of truth
-- Emacs palettes live in `ef-themes/*.el` under `defconst ef-<name>-palette-partial`.
+- Emacs palettes live in `ef-themes/*.el` under `defconst ef-<name>-palette-partial`. You should never change those files.
 - VS Code palettes live in `src/ef-<name>-palette.mjs` and should match the Emacs palette values.
 - VS Code color themes live in `themes/ef-<name>-color-theme.json` and are generated outputs.
 

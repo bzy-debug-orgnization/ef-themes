@@ -19,7 +19,9 @@ function extractThemeList(text, startMarker, endMarker) {
 
 function toTitleCase(themeId) {
   const words = themeId.replace(/^ef-/, "").split("-");
-  return `Ef ${words.map((word) => word[0].toUpperCase() + word.slice(1)).join(" ")}`;
+  return `Ef ${words
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ")}`;
 }
 
 function withAlpha(hex, alpha) {
@@ -47,13 +49,13 @@ function buildTheme(palette, themeName) {
     "editorLineNumber.activeForeground": c("fg_main"),
     "editor.selectionBackground": c("bg_region"),
     "editor.inactiveSelectionBackground": ca("bg_blue_subtle", "99"),
-    "editor.selectionHighlightBackground": ca("bg_completion", "66"),
-    "editor.wordHighlightBackground": ca("bg_info", "66"),
-    "editor.wordHighlightStrongBackground": ca("bg_hover_secondary", "66"),
+    "editor.selectionHighlightBackground": ca("bg_completion", "99"),
+    "editor.wordHighlightBackground": ca("bg_info", "99"),
+    "editor.wordHighlightStrongBackground": ca("bg_hover_secondary", "99"),
     "editor.findMatchBackground": c("bg_yellow_intense"),
-    "editor.findMatchHighlightBackground": ca("bg_blue_intense", "66"),
-    "editor.findRangeHighlightBackground": ca("bg_warning", "66"),
-    "editor.hoverHighlightBackground": ca("bg_hover", "66"),
+    "editor.findMatchHighlightBackground": ca("bg_blue_intense", "99"),
+    "editor.findRangeHighlightBackground": ca("bg_warning", "99"),
+    "editor.hoverHighlightBackground": ca("bg_hover", "99"),
     "editor.lineHighlightBackground": c("bg_hl_line"),
     "editorWhitespace.foreground": c("border"),
     "editorIndentGuide.background1": c("border"),
@@ -168,10 +170,10 @@ function buildTheme(palette, themeName) {
     "gitDecoration.ignoredResourceForeground": c("fg_dim"),
     "gitDecoration.conflictingResourceForeground": c("red_cooler"),
     "gitDecoration.submoduleResourceForeground": c("fg_alt"),
-    "diffEditor.insertedTextBackground": ca("bg_added", "66"),
-    "diffEditor.removedTextBackground": ca("bg_removed", "66"),
-    "diffEditor.insertedLineBackground": ca("bg_added_faint", "66"),
-    "diffEditor.removedLineBackground": ca("bg_removed_faint", "66"),
+    "diffEditor.insertedTextBackground": ca("bg_added", "99"),
+    "diffEditor.removedTextBackground": ca("bg_removed", "99"),
+    "diffEditor.insertedLineBackground": ca("bg_added_faint", "99"),
+    "diffEditor.removedLineBackground": ca("bg_removed_faint", "99"),
     "diffEditor.border": c("border"),
   };
 
@@ -186,7 +188,11 @@ function buildTheme(palette, themeName) {
     },
     {
       name: "Docstrings",
-      scope: ["comment.documentation", "comment.block.documentation", "string.quoted.docstring"],
+      scope: [
+        "comment.documentation",
+        "comment.block.documentation",
+        "string.quoted.docstring",
+      ],
       settings: {
         foreground: c("cyan_faint"),
       },
@@ -207,14 +213,24 @@ function buildTheme(palette, themeName) {
     },
     {
       name: "Types",
-      scope: ["storage.type", "support.type", "entity.name.type", "entity.other.inherited-class"],
+      scope: [
+        "storage.type",
+        "support.type",
+        "entity.name.type",
+        "entity.other.inherited-class",
+      ],
       settings: {
         foreground: c("green_cooler"),
       },
     },
     {
       name: "Functions",
-      scope: ["entity.name.function", "support.function", "meta.function-call", "variable.function"],
+      scope: [
+        "entity.name.function",
+        "support.function",
+        "meta.function-call",
+        "variable.function",
+      ],
       settings: {
         foreground: c("magenta_warmer"),
       },
@@ -228,7 +244,13 @@ function buildTheme(palette, themeName) {
     },
     {
       name: "Constants and Numbers",
-      scope: ["constant", "constant.numeric", "constant.character", "constant.language", "support.constant"],
+      scope: [
+        "constant",
+        "constant.numeric",
+        "constant.character",
+        "constant.language",
+        "support.constant",
+      ],
       settings: {
         foreground: c("blue_cooler"),
       },
@@ -418,12 +440,12 @@ async function main() {
   const lightThemes = extractThemeList(
     efThemesText,
     "defconst ef-themes-light-themes",
-    "defconst ef-themes-dark-themes"
+    "defconst ef-themes-dark-themes",
   );
   const darkThemes = extractThemeList(
     efThemesText,
     "defconst ef-themes-dark-themes",
-    "defvaralias 'ef-themes-collection"
+    "defvaralias 'ef-themes-collection",
   );
   const themeType = new Map();
   for (const theme of lightThemes) {
